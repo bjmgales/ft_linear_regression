@@ -14,8 +14,9 @@ def standardize_df(df: pd.DataFrame, type: str):
     return (df[type] - df[type].mean()) / df[type].std()
 
 
-def rev_standardize_df(df:pd.DataFrame, type: str):
+def rev_standardize_df(df: pd.DataFrame, type: str):
     return df[type] * df[type].std() + df[type].mean()
+
 
 def is_float(value):
     try:
@@ -23,6 +24,7 @@ def is_float(value):
         return True
     except ValueError:
         return False
+
 
 def main():
     try:

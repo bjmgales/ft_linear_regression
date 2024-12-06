@@ -47,7 +47,8 @@ def main():
         sum_price = df['price'].sum()
         sum_predict = estimate_price.sum()
 
-        aggr_precision = 100 - abs(((sum_predict - sum_price) / sum_price) * 100)
+        aggr_precision = 100 - abs(((sum_predict - sum_price)
+                                    / sum_price) * 100)
         print("The model has a an aggregate prices precision of: "
               + str(aggr_precision) + "%")
         print(estimate_price)

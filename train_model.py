@@ -6,7 +6,7 @@ def standardize(df: pd.DataFrame, type: str):
     return (df[type] - df[type].mean()) / df[type].std()
 
 
-def rev_standardize(df:pd.DataFrame, type: str):
+def rev_standardize(df: pd.DataFrame, type: str):
     return df[type] * df[type].std() + df[type].mean()
 
 
@@ -53,6 +53,7 @@ def main():
         f.write(str(t0) + '\n' + str(t1))
     plt.ioff()
     plt.show()
+
 
 if __name__ == '__main__':
     main()
